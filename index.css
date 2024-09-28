@@ -1,0 +1,175 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #f1bdbd; /* Light pink background color */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #393838; /* Dark gray navigation background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Added padding for space */
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 100px; /* Fixed width for logo */
+    height: 100px; /* Fixed height for logo */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+/* Navigation links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color for navigation links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d38d8d; /* Yellow text color on hover */
+}
+
+/* NGO Description Section */
+.ngo-description {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding around the text */
+    text-align: center; /* Center align text */
+    margin: 20px auto; /* Space above and below the section */
+    width: 90%; /* Width of the section */
+    max-width: 800px; /* Max width for larger screens */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+.ngo-description p {
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    color: #333; /* Dark text color */
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+/* Card container to stack cards vertically */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align the cards */
+}
+
+/* Card styles */
+.card {
+    background: #f1bdbd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width for card */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+/* Title and content in cards */
+.card h2 {
+    margin: 10px 0;
+    text-align: center; /* Center align titles */
+}
+
+/* Set fixed dimensions for card images */
+.card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Awards and Partners Section */
+.awards-container, .partners-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly in a row */
+    width: 100%; /* Full width for the container */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Individual award/partner card styles */
+.award, .partner {
+    background: #f0f0f0; /* Light background for individual cards */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 10px); /* One-third width for each card with some margin */
+    margin: 5px; /* Margin around cards */
+    padding: 10px; /* Padding inside individual cards */
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.award:hover, .partner:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333; /* Dark gray footer background color */
+    color: #fff; /* White text color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    width: 90%; /* Width for footer content */
+    max-width: 600px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: flex-start; /* Align links to start */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between links */
+    }
+
+    .award, .partner {
+        width: 100%; /* Full width for smaller screens */
+        max-width: none; /* Remove max-width for flexibility */
+    }
+
+    /* Adjust NGO description for smaller screens */
+    .ngo-description {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+}
+
