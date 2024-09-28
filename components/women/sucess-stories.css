@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light ash background */
+}
+
+/* Header Section */
+header {
+    background-color: #ff6f61; /* Soft pinkish-orange for header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Stories Section */
+.stories {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    align-items: flex-start;
+    padding: 50px 5%; /* Adjust padding for sides */
+    background-color: #fefefe; /* White for stories section */
+}
+
+.story {
+    width: 22%; /* Fixed width for each box */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning the hover effect */
+}
+
+.story:hover {
+    transform: translateY(-10px); /* Moves the card up on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Creates floating shadow effect */
+}
+
+.story img {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 150px; /* Sets a fixed height for images */
+    object-fit: cover; /* Keeps the image aspect ratio intact and fills the space */
+}
+
+.story-content {
+    padding: 10px; /* Padding for the text content */
+    text-align: center; /* Center align text */
+}
+
+.story-content h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.story-content p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #777;
+}
+
+.story-content a {
+    font-size: 0.9em;
+    color: #ff6f61; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.story-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Creative Separator Section */
+.separator {
+    background-color: #f8c291; /* Soft light color */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 50px 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

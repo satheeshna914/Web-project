@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Events</title>
+    <link rel="stylesheet" href="view-bookings.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Booked Events</h1>
+        <nav>
+            <ul>
+                <li><a href="womenemp-index.html">Home</a></li>
+                <li><a href="events.html">Upcoming Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section: Booked Events -->
+    <section class="bookings">
+        <table id="bookingsTable">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Booked events will be populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Women Empowerment. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to Load Booked Events -->
+    <script>
+        window.onload = function() {
+            const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            const tableBody = document.getElementById('bookingsTable').getElementsByTagName('tbody')[0];
+
+            bookings.forEach(booking => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = booking.event;
+                row.insertCell(1).innerText = booking.name;
+                row.insertCell(2).innerText = booking.email;
+                row.insertCell(3).innerText = booking.phone;
+                row.insertCell(4).innerText = booking.date;
+            });
+        };
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light ash background */
+}
+
+/* Header Section */
+header {
+    background-color: #ff6f61; /* Soft pinkish-orange for header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Events Section */
+.events {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of event boxes */
+    justify-content: space-around; /* Space between items */
+    padding: 50px 5%; /* Adjust padding for sides */
+}
+
+.event {
+    width: 22%; /* Fixed width for each box */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px; /* Margin between boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning the hover effect */
+}
+
+.event:hover {
+    transform: translateY(-5px); /* Moves the card up on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Creates floating shadow effect */
+}
+
+.event img {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 150px; /* Sets a fixed height for images */
+    object-fit: cover; /* Keeps the image aspect ratio intact and fills the space */
+}
+
+.event-content {
+    padding: 10px; /* Padding for the text content */
+    text-align: center; /* Center align text */
+}
+
+.event-content h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.event-content p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #777;
+}
+
+.book-btn {
+    background-color: #ff6f61; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.book-btn:hover {
+    background-color: #ff3b47; /* Darker shade on hover */
+}
+
+/* Creative Separator Section */
+.separator {
+    background-color: #f8c291; /* Soft light color */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 50px 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Modal styling */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px;
+}
+
+.modal-content input {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+/* Close button styling */
+.close-btn {
+    background-color: #dc3545;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
